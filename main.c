@@ -21,19 +21,9 @@ void BubbleSort(char *vetor[], int tamanho)
         aux=vetor[i]; 
         vetor[i]=vetor[i+1]; 
         vetor[i+1]=aux; 
-
-
       } 
     } 
   } 
-  
-	i=0;
-	  
-	while (i < 3) {
-        printf("\n Veio aqui");
-		printf("\n %s", vetor[i]);
-		i ++;        
-	}
 	
 }
 
@@ -45,11 +35,11 @@ int main() {
     FILE *in_file1 = fopen(filename1, "w");
      
     if (in_file==NULL){
-    	printf("Arquivo Comandos FTP não existe!");
+    	printf("Arquivo Comandos FTP n existe!");
 	}
 	
 	if (in_file1==NULL){
-		printf("Não foi possivel criar o arquivo para ordenação!");
+		printf("N foi possivel criar o arquivo para ordenacao!");
 	}
 	
     struct stat sb;
@@ -61,14 +51,14 @@ int main() {
     char *palavras = (char *) malloc(1 * sizeof(char));
 
 /*    while (fscanf(in_file, "%[^\n] ", file_contents) != EOF) {
-        printf("\n Veio até aqui");
+        printf("\n teste");
         printf("\n %s", file_contents);
         palavras[cont] = file_contents;
         cont ++;
         palavras = realloc(palavras, cont*sizeof(char));
 	}
 */	
-	char *vetor[3] = {"araine", "teste", "bonequinha"};
+	char *vetor[3] = {"ariane", "teste", "bonequinha"};
 	
 	BubbleSort(&vetor, 3);
 	
@@ -81,3 +71,4 @@ int main() {
     fclose(in_file);
     exit(EXIT_SUCCESS);
 }
+  
